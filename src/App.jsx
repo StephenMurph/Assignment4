@@ -1,20 +1,28 @@
-import './App.css'
-import { ProfileProvider } from './Profile.jsx';
-import ProfileForm from './ProfileForm';
-import ProfileDisplay from './ProfileDisplay';
+import './App.css';
+import DepartmentList from './DepartmentList';
+import ProductList from './ProductList';
+import ManufacturerList from './ManufacturerList';
 
 const App = () => {
     return (
-        <ProfileProvider>
-            <h1>User Profile</h1>
-            <div className="form">
-                <ProfileForm/>
+        <div>
+            <h2>Inventory Management</h2>
+            <div className="data-tables">
+                <div className="table-container">
+                    <h3></h3>
+                    <ProductList />
+                </div>
+                <div className="table-container">
+                    <h3></h3>
+                    <ManufacturerList />
+                </div>
+                <div className="table-container">
+                    <h3></h3>
+                    <DepartmentList />
+                </div>
             </div>
-            <div className="card">
-                <ProfileDisplay/>
-            </div>
-        </ProfileProvider>
-);
+        </div>
+    );
 };
 
 export default App;
